@@ -101,7 +101,7 @@ class Student
     LIMIT 1
     SQL
 
-    result = DB[:conn].execute(sql, "10", 1).map do |row|
+    result = DB[:conn].execute(sql, "10").map do |row|
     self.new_from_db(row)
   end
   end
