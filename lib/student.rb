@@ -79,7 +79,7 @@ class Student
     SELECT * FROM students WHERE grade <= ?
     SQL
 
-    result = DB[:conn].execute(sql, "11th").map do |row|
+    result = DB[:conn].execute(sql, "11").map do |row|
     self.new_from_db(row)
     end
   end
@@ -91,7 +91,7 @@ class Student
 
     result = DB[:conn].execute(sql, "10").map do |row|
     self.new_from_db(row)
-  end
+    end
   end
 
   def self.first_student_in_grade_10
