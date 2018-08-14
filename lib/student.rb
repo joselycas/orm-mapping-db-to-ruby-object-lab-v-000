@@ -104,7 +104,7 @@ class Student
     result = DB[:conn].execute(sql, "10").map do |row|
     self.new_from_db(row)
     end
-    result
+    result.first
   end
 
   def self.all_students_in_grade_X(x)
