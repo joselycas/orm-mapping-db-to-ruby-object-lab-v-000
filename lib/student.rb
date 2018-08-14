@@ -117,6 +117,6 @@ class Student
 
     end
 
-    #binding.pry
+    result.first
   end
 end
