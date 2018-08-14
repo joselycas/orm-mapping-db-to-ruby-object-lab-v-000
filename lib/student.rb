@@ -80,7 +80,7 @@ class Student
     SQL
 
     result = DB[:conn].execute(sql, "11th").map do |row|
-    result.name
+    row.name
     self.new_from_db(row)
     end
   end
